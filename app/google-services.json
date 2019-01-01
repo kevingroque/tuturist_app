@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "671133257967",
+    "firebase_url": "https://tuturistapp.firebaseio.com",
+    "project_id": "tuturistapp",
+    "storage_bucket": "tuturistapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671133257967:android:b33ea0dca80aea9d",
+        "android_client_info": {
+          "package_name": "com.huich.roque.app.tuturist_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671133257967-8e714iiud5eg439u651st5f75nk1v2ae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.huich.roque.app.tuturist_app",
+            "certificate_hash": "c296d0606e5bc5929951c019323a055bc05b36dc"
+          }
+        },
+        {
+          "client_id": "671133257967-82h4f78t1kkg16buu9kkaa4olp1k4f7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrdFWaHhSwqE-8twAp2t8UdDv1UikLLfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671133257967-82h4f78t1kkg16buu9kkaa4olp1k4f7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

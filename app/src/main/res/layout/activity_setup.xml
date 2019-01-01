@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SetupActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_setup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Setup"
+            android:textAlignment="center"
+            android:textColor="#ffff"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_setup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/bg_layout_setup"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:layout_marginTop="@dimen/_120sdp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edt_setup_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:hint="NAME"
+                        android:inputType="textPersonName"
+                        android:padding="@dimen/_15sdp"
+                        android:textColorHint="#606060"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_setup_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:hint="LASTNAME"
+                        android:inputType="text"
+                        android:padding="@dimen/_15sdp"
+                        android:textColorHint="#606060"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_setup_bithday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                        android:focusable="false"
+                        android:hint="BIRTHDATE"
+                        android:inputType="date"
+                        android:maxLines="1"
+                        android:padding="@dimen/_15sdp"
+                        android:textColorHint="#606060"
+                        android:textSize="@dimen/_12sdp"
+                        android:onClick="showDatePickerDialog"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_setup_choosecountry"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginEnd="@dimen/_18sdp"
+                        android:backgroundTint="#d11f08"
+                        android:entries="@array/arrays_nationalities"
+                        android:padding="@dimen/_15sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:text="GENDER"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RadioGroup
+                            android:id="@+id/rg_setup_gender"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_26sdp"
+                            android:layout_weight="1"
+                            android:onClick="radioButtonClicked"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_setup_gender_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:checked="false"
+                                android:text="Female" />
+
+                            <RadioButton
+                                android:id="@+id/rb_setup_gender_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:checked="false"
+                                android:text="Male" />
+
+                            <RadioButton
+                                android:id="@+id/rb_setup_gender_other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:checked="false"
+                                android:text="Other" />
+                        </RadioGroup>
+
+                        <ImageButton
+                            android:id="@+id/img_setup_start"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="0.2"
+                            android:background="@drawable/bg_button"
+                            app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_setup_profile"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/default_image_profile"
+            tools:ignore="VectorDrawableCompat" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_setup_progressbar"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:visibility="visible"/>
+
+</RelativeLayout>

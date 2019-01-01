@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_register"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:gravity="center"
+            android:background="@drawable/bg_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/edt_register_email"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="EMAILL"
+                    android:padding="@dimen/_15sdp"
+                    android:textColorHint="#606060"
+                    android:inputType="textEmailAddress"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:id="@+id/edt_register_password"
+                    android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:hint="PASSWORD"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColorHint="#606060"
+                    android:inputType="textPassword"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:id="@+id/edt_register_confirmpass"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="CONFIRM PASSWORD"
+                    android:padding="@dimen/_12sdp"
+                    android:textColorHint="#606060"
+                    android:inputType="textPassword"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agree to Out Terms &amp; Conditions"
+                    android:id="@+id/checkbox"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"/>
+
+                <ImageButton
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:id="@+id/btn_register_signup"
+                    app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+                    android:background="@drawable/bg_button"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Already have an Account"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:id="@+id/btn_register_signin"
+                    android:background="@drawable/bg_button"
+                    android:text="SIGN IN"
+                    android:onClick="goLoginScreen"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spinkit_register_progress"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
